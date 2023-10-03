@@ -25,6 +25,7 @@ class AjaxController extends Controller
      */
     public function createShortcutQAStories() // TODO: add request class
     {
+        // TODO: instead of synchronous call here, start a cron instead, when additional configuration is available
         ini_set('max_execution_time', 300);
 
         $selectedStoryIds = json_decode(request()->selectedIds, true);
